@@ -64,6 +64,8 @@ class Order:
     order_id: str = str(uuid.uuid4())
     
     def place_order(self, shipping_type, due_date: datetime = None):
+        if not self.cart.products:
+            raise ValueError("Cannot place order with empty cart")
         if not due_date:
             due_date = datetime.now(timezone.utc) + timedelta(seconds=3)
         product_ids = self.cart.submit_cart_order()

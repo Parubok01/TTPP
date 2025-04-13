@@ -16,10 +16,10 @@ class ShippingService:
     def list_available_shipping_type():
         return ['Нова Пошта', 'Укр Пошта', 'Meest Express', 'Самовивіз']
     
-    def create_shipping(self, shipping_type, product_ids, order_id, due_date):
+    def create_shipping(self, shipping_type, product_ids, order_id, due_date, allow_past_due=False):
         if shipping_type not in self.list_available_shipping_type():
             raise ValueError("Shipping type is not available")
-        if due_date <= datetime.now(timezone.utc):
+        if not allow_past_due and due_date <= datetime.now(timezone.utc):
             raise ValueError("Shipping due datetime must be greater than datetime now")
         shipping_id = self.repository.create_shipping(shipping_type, product_ids, order_id, self.SHIPPING_CREATED, due_date)
         self.publisher.send_new_shipping(shipping_id)
