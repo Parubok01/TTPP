@@ -1,5 +1,5 @@
 from behave import given, when, then
-from eshop import Product
+from app.eshop import Product
 
 @given('A product "{name}" with price {price} and availability {availability}')
 def step_given_product(context, name, price, availability):
