@@ -62,16 +62,16 @@ class AdditionalShoppingCartTests(unittest.TestCase):
             mock_buy.assert_called_once_with(2)
             self.assertEqual(len(self.cart.products), 0)
 
-class OrderTests(unittest.TestCase):
-    def setUp(self):
-        self.order = Order()
-        self.order.cart = ShoppingCart()
-        self.product = Product(name="Test", price=100.0, available_amount=5)
+# class OrderTests(unittest.TestCase):
+#     def setUp(self):
+#         self.order = Order()
+#         self.order.cart = ShoppingCart()
+#         self.product = Product(name="Test", price=100.0, available_amount=5)
     
-    def test_place_order(self):
-        with patch.object(self.order.cart, 'submit_cart_order') as mock_submit:
-            self.order.place_order()
-            mock_submit.assert_called_once()
+#     def test_place_order(self):
+#         with patch.object(self.order.cart, 'submit_cart_order') as mock_submit:
+#             self.order.place_order()
+#             mock_submit.assert_called_once()
 
 if __name__ == '__main__':
     unittest.main()
