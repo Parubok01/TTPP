@@ -1,52 +1,52 @@
-Feature: Product
-  We want to test that product functionality works correctly
+Feature: Product availability
+  Test product availability logic
 
-  Scenario: Check product availability
-    Given A product with availability of 100
-    When I check availability for amount 50
-    Then The product should be available
+  Scenario: Product is available
+    Given A product "Phone" with price 1000 and availability 5
+    When I check availability for 3
+    Then The product is available
 
-  Scenario: Check product unavailability
-    Given A product with availability of 100
-    When I check availability for amount 150
-    Then The product should not be available
+  Scenario: Product is not available
+    Given A product "Phone" with price 1000 and availability 5
+    When I check availability for 10
+    Then The product is not available
 
-  Scenario: Buy product and check availability
-    Given A product with availability of 100
-    When I buy 30 units
-    Then The product availability should be 70
+  Scenario: Product availability is zero
+    Given A product "Tablet" with price 500 and availability 0
+    When I check availability for 1
+    Then The product is not available
 
-  Scenario: Try to buy more than available
-    Given A product with availability of 100
-    When I try to buy 150 units
-    Then The operation should fail
+  Scenario: Product availability is equal to requested
+    Given A product "Camera" with price 750 and availability 5
+    When I check availability for 5
+    Then The product is available
 
-  Scenario: Buy zero units
-    Given A product with availability of 100
-    When I try to buy 0 units
-    Then The operation should fail
+  Scenario: Product with negative availability
+    Given A product "TV" with price 300 and availability -1
+    When I check availability for 1
+    Then The product is not available
 
-  Scenario: Buy negative units
-    Given A product with availability of 100
-    When I try to buy -10 units
-    Then The operation should fail
+  Scenario: Product with zero requested
+    Given A product "Mouse" with price 25 and availability 10
+    When I check availability for 0
+    Then The product is available
 
-  Scenario: Compare equal products
-    Given Two products with same name
-    When I compare them
-    Then They should be equal
+  Scenario: Product with negative requested
+    Given A product "Keyboard" with price 45 and availability 5
+    When I check availability for -3
+    Then The product is available
 
-  Scenario: Compare different products
-    Given Two products with different names
-    When I compare them
-    Then They should not be equal
+  Scenario: Product is None
+    Given No product is defined
+    When I check availability for 1
+    Then The product check fails
 
-  Scenario: Create product with zero price
-    Given I try to create a product with zero price
-    When The product is created
-    Then The price should be 0
+  Scenario: Product with None as availability
+    Given A product with None availability
+    When I check availability for 1
+    Then The product check fails
 
-  Scenario: Create product with negative price
-    Given I try to create a product with negative price
-    When The product is created
-    Then The price should be negative 
+  Scenario: Product with non-numeric availability
+    Given A product with string availability "many"
+    When I check availability for 1
+    Then The product check fails
