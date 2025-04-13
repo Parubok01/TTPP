@@ -40,6 +40,8 @@ class Product:
 
 
 class ShoppingCart:
+    products: Dict[Product, int]
+    
     def __init__(self):
         self.products = dict()
     
