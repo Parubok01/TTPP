@@ -46,7 +46,7 @@ jobs:
 
       - name: Run unit tests
         run: |
-          pytest --cov=app --cov-report=term tests/test_case.py
+          pytest --cov=app --cov-report=term tests/unit/test_additional_case.py
 
       - name: Teardown Docker for unit tests
         if: always()
@@ -146,8 +146,8 @@ jobs:
 
       - name: Run integration tests
         run: |
-          pytest --maxfail=1 --disable-warnings -v tests/test_integration.py
-          coverage run -m pytest tests/test_integration.py && coverage report -m
+          pytest --maxfail=1 --disable-warnings -v tests/test_integration_extendet.py
+          coverage run -m pytest tests/test_integration_extendet.py && coverage report -m
 
       - name: Teardown Docker
         if: always()
