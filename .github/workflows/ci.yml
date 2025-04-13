@@ -46,7 +46,7 @@ jobs:
 
       - name: Run unit tests
         run: |
-          pytest --cov=app --cov-report=term tests/unit/test_additional_case.py
+          pytest --cov=app --cov-report=term tests/test_additional_case.py
 
       - name: Teardown Docker for unit tests
         if: always()
