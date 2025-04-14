@@ -1,11 +1,9 @@
 import logging
 from playwright.sync_api import sync_playwright, expect
 
-# Налаштування логування
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
 
-# Клас POM для сторінки пошуку
 class SearchPagePOM:
     def __init__(self, page):
         self.page = page
@@ -25,7 +23,6 @@ class SearchPagePOM:
         expect(self.search_hit_source).to_be_visible(timeout=10000)
         self.page.screenshot(path="react_search_results.png")
 
-# Тест 1: Пошук у документації (POM, адаптація вашого тесту)
 def test_search_react_docs():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
@@ -42,7 +39,6 @@ def test_search_react_docs():
         finally:
             browser.close()
 
-# Тест 2: Перевірка заголовка головної сторінки
 def test_homepage_title():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
@@ -59,7 +55,6 @@ def test_homepage_title():
         finally:
             browser.close()
 
-# Тест 3: Перехід до розділу "Learn"
 def test_navigate_to_learn():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
@@ -77,7 +72,6 @@ def test_navigate_to_learn():
         finally:
             browser.close()
 
-# Тест 4: Перевірка видимості посилання на GitHub у футері (виправлено)
 def test_footer_github_link():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
@@ -95,7 +89,6 @@ def test_footer_github_link():
         finally:
             browser.close()
 
-# Тест 5: Перевірка адаптивності головної сторінки
 def test_homepage_responsive():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
@@ -114,7 +107,6 @@ def test_homepage_responsive():
         finally:
             browser.close()
 
-# Тест 6: Перехід до розділу "Reference"
 def test_navigate_to_reference():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
@@ -132,7 +124,6 @@ def test_navigate_to_reference():
         finally:
             browser.close()
 
-# Тест 7: Перевірка видимості кнопки пошуку
 def test_search_button_visible():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
@@ -150,7 +141,6 @@ def test_search_button_visible():
         finally:
             browser.close()
 
-# Тест 8: Перехід до розділу "Community"
 def test_navigate_to_community():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
@@ -168,7 +158,6 @@ def test_navigate_to_community():
         finally:
             browser.close()
 
-# Тест 9: Перевірка валідності поля пошуку
 def test_theme_button():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
@@ -186,7 +175,6 @@ def test_theme_button():
         finally:
             browser.close()
 
-# Тест 10: Перевірка видимості прикладу коду на сторінці "Learn"
 def test_copy_code_snippet():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
