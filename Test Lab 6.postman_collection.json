@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "2f96b947-f204-41e7-bf96-cca02459b90e",
+		"name": "Test Lab 6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30818096"
+	},
+	"item": [
+		{
+			"name": "posts",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200));\r",
+							"pm.test(\"Response is an array\", () => pm.expect(pm.response.json()).to.be.an('array'));\r",
+							"pm.test(\"Contains more than 0 posts\", () => pm.expect(pm.response.json().length).to.be.above(0));\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}posts",
+					"host": [
+						"{{URL}}posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "firstPost",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status 200 OK\", () => pm.response.to.have.status(200));\r",
+							"pm.test(\"Post has ID 1\", () => pm.expect(pm.response.json().id).to.eql(1));\r",
+							"pm.test(\"Post contains title\", () => pm.expect(pm.response.json()).to.have.property(\"title\"));\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}posts/1",
+					"host": [
+						"{{URL}}posts"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "negativePosts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status 404 or empty\", () => {\r",
+							"    pm.expect([200, 404]).to.include(pm.response.code);\r",
+							"});\r",
+							"pm.test(\"Empty object returned\", () => pm.expect(pm.response.json()).to.be.empty);\r",
+							"pm.test(\"Content-Type is application/json\", () => pm.response.to.have.header(\"Content-Type\"));\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}posts/101",
+					"host": [
+						"{{URL}}posts"
+					],
+					"path": [
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status 200\", () => pm.response.to.have.status(200));\r",
+							"pm.test(\"Has name field\", () => pm.expect(pm.response.json()).to.have.property(\"name\"));\r",
+							"pm.test(\"Username is defined\", () => pm.expect(pm.response.json().username).to.not.be.undefined);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}users/1",
+					"host": [
+						"{{URL}}users"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "negativeUsers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status 404 or 200 with empty object\", () => {\r",
+							"    pm.expect([404, 200]).to.include(pm.response.code);\r",
+							"});\r",
+							"pm.test(\"Response should be empty object\", () => pm.expect(pm.response.json()).to.be.empty);\r",
+							"pm.test(\"JSON format\", () => pm.expect(pm.response.json()).to.be.an(\"object\"));\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}users/11",
+					"host": [
+						"{{URL}}users"
+					],
+					"path": [
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let usernames = pm.collectionVariables.get(\"usernames\");\r",
+							"if (!usernames || usernames.length == 0) {\r",
+							"    usernames = [\"Max\", 123454, \":-028734\", \"Ivan\", \"Petro\", \"TEst---1231234\"];\r",
+							"}\r",
+							"let currentUsername = usernames.shift();\r",
+							"console.log(currentUsername);\r",
+							"pm.collectionVariables.set(\"username\", currentUsername);\r",
+							"pm.collectionVariables.set(\"usernames\", usernames);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 201\", function() {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Username of created user equals defined name\", function() {\r",
+							"    const jsonResponse = pm.response.json();\r",
+							"    pm.expect(jsonResponse.name).to.be.eql(pm.collectionVariables.get(\"username\"));\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}users",
+					"host": [
+						"{{URL}}users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status 201 Created\", () => pm.response.to.have.status(201));\r",
+							"pm.test(\"New post has ID\", () => pm.expect(pm.response.json()).to.have.property(\"id\"));\r",
+							"pm.test(\"Title matches\", () => pm.expect(pm.response.json().title).to.eql(\"My Test\"));\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My Test\",\r\n  \"body\": \"This is just a test\",\r\n  \"userId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}posts",
+					"host": [
+						"{{URL}}posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "negativePosts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status 201 even with bad body (mock API)\", () => pm.response.to.have.status(201));\r",
+							"pm.test(\"Response contains bad_field\", () => pm.expect(pm.response.json()).to.have.property(\"bad_field\"));\r",
+							"pm.test(\"Response is not an error (mock API logic)\", () => pm.expect(pm.response.json()).to.be.an(\"object\"));\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bad_field\": \"no title\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}posts",
+					"host": [
+						"{{URL}}posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status 200\", () => pm.response.to.have.status(200));\r",
+							"pm.test(\"Updated title\", () => pm.expect(pm.response.json().title).to.eql(\"Updated Title\"));\r",
+							"pm.test(\"ID remains 1\", () => pm.expect(pm.response.json().id).to.eql(1));\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"title\": \"Updated Title\",\r\n  \"body\": \"Updated Content\",\r\n  \"userId\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}posts/1",
+					"host": [
+						"{{URL}}posts"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "negativePosts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Should return 404 or fallback to 200 (mock API)\", () => pm.expect([404, 200]).to.include(pm.response.code));\r",
+							"pm.test(\"Response contains ID or is empty\", () => {\r",
+							"    const res = pm.response.json();\r",
+							"    pm.expect(typeof res === \"object\").to.be.true;\r",
+							"});\r",
+							"pm.test(\"Content-Type JSON\", () => pm.response.to.have.header(\"Content-Type\"));\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}posts/test",
+					"host": [
+						"{{URL}}posts"
+					],
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status 200\", () => pm.response.to.have.status(200));\r",
+							"pm.test(\"Response is empty object\", () => pm.expect(pm.response.json()).to.be.empty);\r",
+							"pm.test(\"Object type response\", () => pm.expect(pm.response.json()).to.be.an(\"object\"));\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}posts/1",
+					"host": [
+						"{{URL}}posts"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "username",
+			"value": ""
+		},
+		{
+			"key": "usernames",
+			"value": ""
+		}
+	]
+}
