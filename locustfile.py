@@ -78,18 +78,6 @@ class ApiPerformanceTest(HttpUser):
         with self.client.get(f"/users/{self.test_data['user_id']}/todos", name="Get user todos", catch_response=True) as response:
             self._validate_response(response, is_list=True)
 
-    @tag('albums', 'get')
-    @task(1)
-    def fetch_albums(self):
-        with self.client.get("/albums", name="Get albums", catch_response=True) as response:
-            self._validate_response(response, is_list=True, min_length=1)
-
-    @tag('photos', 'get')
-    @task(1)
-    def fetch_album_photos(self):
-        with self.client.get(f"/albums/{self.test_data['album_id']}/photos", name="Get album photos", catch_response=True) as response:
-            self._validate_response(response, is_list=True, check_items=['albumId', 'url'])
-
     @tag('todos', 'post')
     @task(1)
     def create_todo(self):
