@@ -112,15 +112,12 @@ def test_cart_integration():
         Product("Pen", 1.5, 5)
     ]
     
-    # Додаємо продукти
     cart.add_product(products[0], 1)
     cart.add_product(products[1], 3)
     
-    # Перевіряємо наявність і загальну суму
     assert cart.contains_product(products[0])
     assert cart.calculate_total() == 10.0 * 1 + 1.5 * 3
     
-    # Видаляємо один продукт
     cart.remove_product(products[0])
     assert not cart.contains_product(products[0])
     assert cart.calculate_total() == 1.5 * 3
@@ -129,7 +126,6 @@ def test_add_product_success():
     cart = ShoppingCart()
     product = Product("Notebook", 5.99, 5)
     
-    # Успішне додавання
     cart.add_product(product, 3)
     assert cart.contains_product(product)
     assert cart.products[product] == 3
@@ -138,7 +134,6 @@ def test_add_product_failure():
     cart = ShoppingCart()
     product = Product("Notebook", 5.99, 2)
     
-    # Спроба додати більше, ніж є в наявності
     with pytest.raises(ValueError) as exc_info:
         cart.add_product(product, 3)
     assert str(exc_info.value) == "Product Notebook has only 2 items"
@@ -147,9 +142,7 @@ def test_contains_product():
     cart = ShoppingCart()
     product = Product("Book", 15.99, 10)
     
-    # Перевірка порожнього кошика
     assert not cart.contains_product(product)
     
-    # Додаємо продукт і перевіряємо знову
     cart.add_product(product, 2)
     assert cart.contains_product(product)
