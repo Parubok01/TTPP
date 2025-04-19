@@ -5,7 +5,6 @@ from pages.facade import SauceDemoFacade
 from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 from pages.cart_page import CartPage
-from pages.checkout_page import CheckoutPage
 
 @pytest.fixture
 def browser_context():
@@ -35,7 +34,3 @@ def inventory_page(page):
 @pytest.fixture
 def cart_page(page):
     return CartPage(page)
-
-@pytest.fixture
-def checkout_page(page):
-    return CheckoutPage(page)

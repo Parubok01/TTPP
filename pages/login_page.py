@@ -17,6 +17,7 @@ class LoginPage(BasePage):
         self.page.fill(self.username_input, username)
         self.page.fill(self.password_input, password)
         self.page.click(self.login_button)
+        self.page.wait_for_load_state("networkidle")
 
     def get_error_message(self):
         return self.page.locator(self.error_message)
