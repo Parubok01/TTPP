@@ -1,0 +1,1445 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /><title>Cosmic Ray Report</title></head><body><div class="container"><h1><p class="text-dark">Cosmic Ray Report</p></h1></div><div class="container"><div class="mb-1" id="summary_info___accordion"><div class="card"><a data-toggle="collapse" data-target="#summary_info___collapse_1" aria-expanded="true" aria-controls="summary_info___collapse_1" href="#"><div class="card-header" id="summary_info___heading_1"><button class="btn btn-outline-dark"><h4 class="m-0">Summary info</h4></button></div></a><div aria-labelledby="summary_info___heading_1" data-parent="#summary_info___accordion" class="collapse show" id="summary_info___collapse_1"><div class="card-body"><p>Date time: 23/04/2025 12:05:42</p><p>Total jobs: 38</p><p>Complete: 38 (100.00%)</p><p>Surviving mutants: 0 (0.00%)</p></div></div></div></div><div class="mb-1" id="job_list___accordion"><div class="card"><a data-toggle="collapse" data-target="#job_list___collapse_1" aria-expanded="false" aria-controls="job_list___collapse_1" href="#"><div class="card-header" id="job_list___heading_1"><button class="btn btn-outline-dark"><h4 class="m-0">Job list</h4></button></div></a><div aria-labelledby="job_list___heading_1" data-parent="#job_list___accordion" class="collapse" id="job_list___collapse_1"><div class="card-body"><div class="text-right mb-1"><div class="mx-1" id="job_item_expand_all"><a href="#" onclick="$('div.job_list___sub_multi_collapse').collapse('show');"><button class="btn btn-outline-dark"><span>Expand All</span></button></a></div><div class="mx-1" id="job_item_collapse_all"><a href="#" onclick="$('div.job_list___sub_multi_collapse').collapse('hide');"><button class="btn btn-outline-dark"><span>Collapse All</span></button></a></div></div><div class="mb-1" id="job_list___sub_accordion_1"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_1_1" aria-expanded="false" aria-controls="job_list___sub_collapse_1_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_1_1"><button class="btn btn-outline-info"><span class="job_id">1 : Job ID e7de94fb0cf7472497a29dd63f5ec777</span></button></div></a><div aria-labelledby="job_list___sub_heading_1_1" data-parent="#job_list___sub_accordion_1" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_1_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=43" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (43, 28), end pos: (43, 29)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mul_Add, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -40,7 +40,7 @@
+         return product in self.products
+     
+     def calculate_total(self):
+-        return sum([p.price * count for p, count in self.products.items()])
++        return sum([p.price + count for p, count in self.products.items()])
+     
+     def add_product(self, product: Product, amount: int):
+         if not product.is_available(amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_2"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_2_1" aria-expanded="false" aria-controls="job_list___sub_collapse_2_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_2_1"><button class="btn btn-outline-info"><span class="job_id">2 : Job ID 9edccc0c29644f7fa94923f476e102b2</span></button></div></a><div aria-labelledby="job_list___sub_heading_2_1" data-parent="#job_list___sub_accordion_2" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_2_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=43" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (43, 28), end pos: (43, 29)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mul_Sub, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -40,7 +40,7 @@
+         return product in self.products
+     
+     def calculate_total(self):
+-        return sum([p.price * count for p, count in self.products.items()])
++        return sum([p.price - count for p, count in self.products.items()])
+     
+     def add_product(self, product: Product, amount: int):
+         if not product.is_available(amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_3"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_3_1" aria-expanded="false" aria-controls="job_list___sub_collapse_3_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_3_1"><button class="btn btn-outline-info"><span class="job_id">3 : Job ID c08008d1a7fe42c489028165695209cf</span></button></div></a><div aria-labelledby="job_list___sub_heading_3_1" data-parent="#job_list___sub_accordion_3" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_3_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=43" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (43, 28), end pos: (43, 29)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mul_Div, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -40,7 +40,7 @@
+         return product in self.products
+     
+     def calculate_total(self):
+-        return sum([p.price * count for p, count in self.products.items()])
++        return sum([p.price / count for p, count in self.products.items()])
+     
+     def add_product(self, product: Product, amount: int):
+         if not product.is_available(amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_4"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_4_1" aria-expanded="false" aria-controls="job_list___sub_collapse_4_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_4_1"><button class="btn btn-outline-info"><span class="job_id">4 : Job ID f23ac97322b74348939cb93fb7a38905</span></button></div></a><div aria-labelledby="job_list___sub_heading_4_1" data-parent="#job_list___sub_accordion_4" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_4_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=43" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (43, 28), end pos: (43, 29)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mul_FloorDiv, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -40,7 +40,7 @@
+         return product in self.products
+     
+     def calculate_total(self):
+-        return sum([p.price * count for p, count in self.products.items()])
++        return sum([p.price // count for p, count in self.products.items()])
+     
+     def add_product(self, product: Product, amount: int):
+         if not product.is_available(amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_5"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_5_1" aria-expanded="false" aria-controls="job_list___sub_collapse_5_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_5_1"><button class="btn btn-outline-info"><span class="job_id">5 : Job ID 379bc172e9484ae9bcd940ff120dbb27</span></button></div></a><div aria-labelledby="job_list___sub_heading_5_1" data-parent="#job_list___sub_accordion_5" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_5_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=43" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (43, 28), end pos: (43, 29)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mul_Mod, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -40,7 +40,7 @@
+         return product in self.products
+     
+     def calculate_total(self):
+-        return sum([p.price * count for p, count in self.products.items()])
++        return sum([p.price % count for p, count in self.products.items()])
+     
+     def add_product(self, product: Product, amount: int):
+         if not product.is_available(amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_6"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_6_1" aria-expanded="false" aria-controls="job_list___sub_collapse_6_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_6_1"><button class="btn btn-outline-info"><span class="job_id">6 : Job ID 1b705b4feaaf4e88b5dbe645b6a66b77</span></button></div></a><div aria-labelledby="job_list___sub_heading_6_1" data-parent="#job_list___sub_accordion_6" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_6_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=43" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (43, 28), end pos: (43, 29)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mul_Pow, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -40,7 +40,7 @@
+         return product in self.products
+     
+     def calculate_total(self):
+-        return sum([p.price * count for p, count in self.products.items()])
++        return sum([p.price ** count for p, count in self.products.items()])
+     
+     def add_product(self, product: Product, amount: int):
+         if not product.is_available(amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_7"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_7_1" aria-expanded="false" aria-controls="job_list___sub_collapse_7_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_7_1"><button class="btn btn-outline-info"><span class="job_id">7 : Job ID 289c0d70605343f3bea3ab686610aea7</span></button></div></a><div aria-labelledby="job_list___sub_heading_7_1" data-parent="#job_list___sub_accordion_7" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_7_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=43" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (43, 28), end pos: (43, 29)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mul_RShift, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -40,7 +40,7 @@
+         return product in self.products
+     
+     def calculate_total(self):
+-        return sum([p.price * count for p, count in self.products.items()])
++        return sum([p.price &gt;&gt; count for p, count in self.products.items()])
+     
+     def add_product(self, product: Product, amount: int):
+         if not product.is_available(amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_8"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_8_1" aria-expanded="false" aria-controls="job_list___sub_collapse_8_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_8_1"><button class="btn btn-outline-info"><span class="job_id">8 : Job ID 4b0973b50f974925808bfe8c8d448106</span></button></div></a><div aria-labelledby="job_list___sub_heading_8_1" data-parent="#job_list___sub_accordion_8" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_8_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=43" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (43, 28), end pos: (43, 29)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mul_LShift, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -40,7 +40,7 @@
+         return product in self.products
+     
+     def calculate_total(self):
+-        return sum([p.price * count for p, count in self.products.items()])
++        return sum([p.price &lt;&lt; count for p, count in self.products.items()])
+     
+     def add_product(self, product: Product, amount: int):
+         if not product.is_available(amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_9"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_9_1" aria-expanded="false" aria-controls="job_list___sub_collapse_9_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_9_1"><button class="btn btn-outline-info"><span class="job_id">9 : Job ID 598c195240214ba796e0d54a993dfbaf</span></button></div></a><div aria-labelledby="job_list___sub_heading_9_1" data-parent="#job_list___sub_accordion_9" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_9_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=43" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (43, 28), end pos: (43, 29)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mul_BitOr, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -40,7 +40,7 @@
+         return product in self.products
+     
+     def calculate_total(self):
+-        return sum([p.price * count for p, count in self.products.items()])
++        return sum([p.price | count for p, count in self.products.items()])
+     
+     def add_product(self, product: Product, amount: int):
+         if not product.is_available(amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_10"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_10_1" aria-expanded="false" aria-controls="job_list___sub_collapse_10_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_10_1"><button class="btn btn-outline-info"><span class="job_id">10 : Job ID 019e51fce4f1459893ab047142ef3963</span></button></div></a><div aria-labelledby="job_list___sub_heading_10_1" data-parent="#job_list___sub_accordion_10" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_10_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=43" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (43, 28), end pos: (43, 29)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mul_BitAnd, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -40,7 +40,7 @@
+         return product in self.products
+     
+     def calculate_total(self):
+-        return sum([p.price * count for p, count in self.products.items()])
++        return sum([p.price &amp; count for p, count in self.products.items()])
+     
+     def add_product(self, product: Product, amount: int):
+         if not product.is_available(amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_11"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_11_1" aria-expanded="false" aria-controls="job_list___sub_collapse_11_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_11_1"><button class="btn btn-outline-info"><span class="job_id">11 : Job ID 3db0f75ca1064df6ba8c50e36749278f</span></button></div></a><div aria-labelledby="job_list___sub_heading_11_1" data-parent="#job_list___sub_accordion_11" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_11_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=43" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (43, 28), end pos: (43, 29)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mul_BitXor, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -40,7 +40,7 @@
+         return product in self.products
+     
+     def calculate_total(self):
+-        return sum([p.price * count for p, count in self.products.items()])
++        return sum([p.price ^ count for p, count in self.products.items()])
+     
+     def add_product(self, product: Product, amount: int):
+         if not product.is_available(amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_12"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_12_1" aria-expanded="false" aria-controls="job_list___sub_collapse_12_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_12_1"><button class="btn btn-outline-info"><span class="job_id">12 : Job ID adb2cd8ae86649ad9ba89c9a9692bdb0</span></button></div></a><div aria-labelledby="job_list___sub_heading_12_1" data-parent="#job_list___sub_accordion_12" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_12_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (22, 25), end pos: (22, 27)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_NotEq, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -19,7 +19,7 @@
+         self.available_amount -= requested_amount
+     
+     def __eq__(self, other):
+-        return self.name == other.name
++        return self.name != other.name
+     
+     def __ne__(self, other):
+         return self.name != other.name</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_13"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_13_1" aria-expanded="false" aria-controls="job_list___sub_collapse_13_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_13_1"><button class="btn btn-outline-info"><span class="job_id">13 : Job ID 2743c68e94ba4381a6cb03d29358d90a</span></button></div></a><div aria-labelledby="job_list___sub_heading_13_1" data-parent="#job_list___sub_accordion_13" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_13_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (22, 25), end pos: (22, 27)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_Lt, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -19,7 +19,7 @@
+         self.available_amount -= requested_amount
+     
+     def __eq__(self, other):
+-        return self.name == other.name
++        return self.name &lt; other.name
+     
+     def __ne__(self, other):
+         return self.name != other.name</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_14"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_14_1" aria-expanded="false" aria-controls="job_list___sub_collapse_14_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_14_1"><button class="btn btn-outline-info"><span class="job_id">14 : Job ID 35061bfd5b304db58cb957202f7dd2ff</span></button></div></a><div aria-labelledby="job_list___sub_heading_14_1" data-parent="#job_list___sub_accordion_14" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_14_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (22, 25), end pos: (22, 27)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_LtE, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -19,7 +19,7 @@
+         self.available_amount -= requested_amount
+     
+     def __eq__(self, other):
+-        return self.name == other.name
++        return self.name &lt;= other.name
+     
+     def __ne__(self, other):
+         return self.name != other.name</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_15"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_15_1" aria-expanded="false" aria-controls="job_list___sub_collapse_15_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_15_1"><button class="btn btn-outline-info"><span class="job_id">15 : Job ID cb35adb5d9e74675a07b99c6e22407c8</span></button></div></a><div aria-labelledby="job_list___sub_heading_15_1" data-parent="#job_list___sub_accordion_15" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_15_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (22, 25), end pos: (22, 27)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_Gt, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -19,7 +19,7 @@
+         self.available_amount -= requested_amount
+     
+     def __eq__(self, other):
+-        return self.name == other.name
++        return self.name &gt; other.name
+     
+     def __ne__(self, other):
+         return self.name != other.name</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_16"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_16_1" aria-expanded="false" aria-controls="job_list___sub_collapse_16_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_16_1"><button class="btn btn-outline-info"><span class="job_id">16 : Job ID f91605e00cce404cbd4d126ca6ac8a26</span></button></div></a><div aria-labelledby="job_list___sub_heading_16_1" data-parent="#job_list___sub_accordion_16" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_16_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (22, 25), end pos: (22, 27)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_GtE, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -19,7 +19,7 @@
+         self.available_amount -= requested_amount
+     
+     def __eq__(self, other):
+-        return self.name == other.name
++        return self.name &gt;= other.name
+     
+     def __ne__(self, other):
+         return self.name != other.name</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_17"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_17_1" aria-expanded="false" aria-controls="job_list___sub_collapse_17_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_17_1"><button class="btn btn-outline-info"><span class="job_id">17 : Job ID 70d7ae59624a46a8893ac107b5e7ba52</span></button></div></a><div aria-labelledby="job_list___sub_heading_17_1" data-parent="#job_list___sub_accordion_17" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_17_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (22, 25), end pos: (22, 27)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_Is, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -19,7 +19,7 @@
+         self.available_amount -= requested_amount
+     
+     def __eq__(self, other):
+-        return self.name == other.name
++        return self.name is other.name
+     
+     def __ne__(self, other):
+         return self.name != other.name</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_18"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_18_1" aria-expanded="false" aria-controls="job_list___sub_collapse_18_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_18_1"><button class="btn btn-outline-info"><span class="job_id">18 : Job ID 2c0c71aa993246f0a7547245cfebf13a</span></button></div></a><div aria-labelledby="job_list___sub_heading_18_1" data-parent="#job_list___sub_accordion_18" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_18_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (22, 25), end pos: (22, 27)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_IsNot, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -19,7 +19,7 @@
+         self.available_amount -= requested_amount
+     
+     def __eq__(self, other):
+-        return self.name == other.name
++        return self.name is not other.name
+     
+     def __ne__(self, other):
+         return self.name != other.name</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_19"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_19_1" aria-expanded="false" aria-controls="job_list___sub_collapse_19_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_19_1"><button class="btn btn-outline-info"><span class="job_id">19 : Job ID 1a6b66a3e8fa47e4894c4b490747f999</span></button></div></a><div aria-labelledby="job_list___sub_heading_19_1" data-parent="#job_list___sub_accordion_19" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_19_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=25" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (25, 25), end pos: (25, 27)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_NotEq_Eq, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -22,7 +22,7 @@
+         return self.name == other.name
+     
+     def __ne__(self, other):
+-        return self.name != other.name
++        return self.name == other.name
+     
+     def __hash__(self):
+         return hash(self.name)</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_20"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_20_1" aria-expanded="false" aria-controls="job_list___sub_collapse_20_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_20_1"><button class="btn btn-outline-info"><span class="job_id">20 : Job ID e519deebfe99498686088e5359c2e70c</span></button></div></a><div aria-labelledby="job_list___sub_heading_20_1" data-parent="#job_list___sub_accordion_20" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_20_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=25" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (25, 25), end pos: (25, 27)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_NotEq_Lt, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -22,7 +22,7 @@
+         return self.name == other.name
+     
+     def __ne__(self, other):
+-        return self.name != other.name
++        return self.name &lt; other.name
+     
+     def __hash__(self):
+         return hash(self.name)</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_21"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_21_1" aria-expanded="false" aria-controls="job_list___sub_collapse_21_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_21_1"><button class="btn btn-outline-info"><span class="job_id">21 : Job ID 751149ba4d5e4bf3af8d05b78ff81cf7</span></button></div></a><div aria-labelledby="job_list___sub_heading_21_1" data-parent="#job_list___sub_accordion_21" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_21_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=25" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (25, 25), end pos: (25, 27)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_NotEq_LtE, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -22,7 +22,7 @@
+         return self.name == other.name
+     
+     def __ne__(self, other):
+-        return self.name != other.name
++        return self.name &lt;= other.name
+     
+     def __hash__(self):
+         return hash(self.name)</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_22"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_22_1" aria-expanded="false" aria-controls="job_list___sub_collapse_22_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_22_1"><button class="btn btn-outline-info"><span class="job_id">22 : Job ID 58049f4d0a4143e387a329340575f91b</span></button></div></a><div aria-labelledby="job_list___sub_heading_22_1" data-parent="#job_list___sub_accordion_22" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_22_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=25" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (25, 25), end pos: (25, 27)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_NotEq_Gt, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -22,7 +22,7 @@
+         return self.name == other.name
+     
+     def __ne__(self, other):
+-        return self.name != other.name
++        return self.name &gt; other.name
+     
+     def __hash__(self):
+         return hash(self.name)</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_23"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_23_1" aria-expanded="false" aria-controls="job_list___sub_collapse_23_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_23_1"><button class="btn btn-outline-info"><span class="job_id">23 : Job ID 8a092132c59a4777a396e9307777047f</span></button></div></a><div aria-labelledby="job_list___sub_heading_23_1" data-parent="#job_list___sub_accordion_23" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_23_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=25" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (25, 25), end pos: (25, 27)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_NotEq_GtE, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -22,7 +22,7 @@
+         return self.name == other.name
+     
+     def __ne__(self, other):
+-        return self.name != other.name
++        return self.name &gt;= other.name
+     
+     def __hash__(self):
+         return hash(self.name)</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_24"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_24_1" aria-expanded="false" aria-controls="job_list___sub_collapse_24_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_24_1"><button class="btn btn-outline-info"><span class="job_id">24 : Job ID 4fe54cae949f4acf809da8a1cc095ee7</span></button></div></a><div aria-labelledby="job_list___sub_heading_24_1" data-parent="#job_list___sub_accordion_24" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_24_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=25" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (25, 25), end pos: (25, 27)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_NotEq_Is, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -22,7 +22,7 @@
+         return self.name == other.name
+     
+     def __ne__(self, other):
+-        return self.name != other.name
++        return self.name is other.name
+     
+     def __hash__(self):
+         return hash(self.name)</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_25"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_25_1" aria-expanded="false" aria-controls="job_list___sub_collapse_25_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_25_1"><button class="btn btn-outline-info"><span class="job_id">25 : Job ID 854e1e1dc41a431886ef9056ca8c01e4</span></button></div></a><div aria-labelledby="job_list___sub_heading_25_1" data-parent="#job_list___sub_accordion_25" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_25_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=25" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (25, 25), end pos: (25, 27)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_NotEq_IsNot, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -22,7 +22,7 @@
+         return self.name == other.name
+     
+     def __ne__(self, other):
+-        return self.name != other.name
++        return self.name is not other.name
+     
+     def __hash__(self):
+         return hash(self.name)</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_26"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_26_1" aria-expanded="false" aria-controls="job_list___sub_collapse_26_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_26_1"><button class="btn btn-outline-info"><span class="job_id">26 : Job ID 9c032dc64ae149e99d0a13a88e706379</span></button></div></a><div aria-labelledby="job_list___sub_heading_26_1" data-parent="#job_list___sub_accordion_26" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_26_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=14" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (14, 37), end pos: (14, 39)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_GtE_Eq, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -11,7 +11,7 @@
+         self.available_amount = available_amount
+     
+     def is_available(self, requested_amount):
+-        return self.available_amount &gt;= requested_amount
++        return self.available_amount == requested_amount
+     
+     def buy(self, requested_amount):
+         if not self.is_available(requested_amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_27"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_27_1" aria-expanded="false" aria-controls="job_list___sub_collapse_27_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_27_1"><button class="btn btn-outline-info"><span class="job_id">27 : Job ID 9a0b4d2fcc38497f8ab4a37fe6b98e1f</span></button></div></a><div aria-labelledby="job_list___sub_heading_27_1" data-parent="#job_list___sub_accordion_27" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_27_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=14" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (14, 37), end pos: (14, 39)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_GtE_NotEq, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -11,7 +11,7 @@
+         self.available_amount = available_amount
+     
+     def is_available(self, requested_amount):
+-        return self.available_amount &gt;= requested_amount
++        return self.available_amount != requested_amount
+     
+     def buy(self, requested_amount):
+         if not self.is_available(requested_amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_28"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_28_1" aria-expanded="false" aria-controls="job_list___sub_collapse_28_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_28_1"><button class="btn btn-outline-info"><span class="job_id">28 : Job ID 71a3c4a6f7554a8fb3901413702c4d73</span></button></div></a><div aria-labelledby="job_list___sub_heading_28_1" data-parent="#job_list___sub_accordion_28" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_28_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=14" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (14, 37), end pos: (14, 39)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_GtE_Lt, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -11,7 +11,7 @@
+         self.available_amount = available_amount
+     
+     def is_available(self, requested_amount):
+-        return self.available_amount &gt;= requested_amount
++        return self.available_amount &lt; requested_amount
+     
+     def buy(self, requested_amount):
+         if not self.is_available(requested_amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_29"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_29_1" aria-expanded="false" aria-controls="job_list___sub_collapse_29_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_29_1"><button class="btn btn-outline-info"><span class="job_id">29 : Job ID 92e7ef12718e4649a89b9730bacfb384</span></button></div></a><div aria-labelledby="job_list___sub_heading_29_1" data-parent="#job_list___sub_accordion_29" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_29_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=14" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (14, 37), end pos: (14, 39)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_GtE_LtE, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -11,7 +11,7 @@
+         self.available_amount = available_amount
+     
+     def is_available(self, requested_amount):
+-        return self.available_amount &gt;= requested_amount
++        return self.available_amount &lt;= requested_amount
+     
+     def buy(self, requested_amount):
+         if not self.is_available(requested_amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_30"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_30_1" aria-expanded="false" aria-controls="job_list___sub_collapse_30_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_30_1"><button class="btn btn-outline-info"><span class="job_id">30 : Job ID 2f5172504b474b91a30dd5f210480542</span></button></div></a><div aria-labelledby="job_list___sub_heading_30_1" data-parent="#job_list___sub_accordion_30" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_30_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=14" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (14, 37), end pos: (14, 39)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_GtE_Gt, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -11,7 +11,7 @@
+         self.available_amount = available_amount
+     
+     def is_available(self, requested_amount):
+-        return self.available_amount &gt;= requested_amount
++        return self.available_amount &gt; requested_amount
+     
+     def buy(self, requested_amount):
+         if not self.is_available(requested_amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_31"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_31_1" aria-expanded="false" aria-controls="job_list___sub_collapse_31_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_31_1"><button class="btn btn-outline-info"><span class="job_id">31 : Job ID bdf977af09d94f86a2e0cced3fc9bbea</span></button></div></a><div aria-labelledby="job_list___sub_heading_31_1" data-parent="#job_list___sub_accordion_31" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_31_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=14" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (14, 37), end pos: (14, 39)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_GtE_Is, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -11,7 +11,7 @@
+         self.available_amount = available_amount
+     
+     def is_available(self, requested_amount):
+-        return self.available_amount &gt;= requested_amount
++        return self.available_amount is requested_amount
+     
+     def buy(self, requested_amount):
+         if not self.is_available(requested_amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_32"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_32_1" aria-expanded="false" aria-controls="job_list___sub_collapse_32_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_32_1"><button class="btn btn-outline-info"><span class="job_id">32 : Job ID 8b0dbd3e807542b0a47c96c2d1cb5851</span></button></div></a><div aria-labelledby="job_list___sub_heading_32_1" data-parent="#job_list___sub_accordion_32" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_32_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=14" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (14, 37), end pos: (14, 39)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_GtE_IsNot, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -11,7 +11,7 @@
+         self.available_amount = available_amount
+     
+     def is_available(self, requested_amount):
+-        return self.available_amount &gt;= requested_amount
++        return self.available_amount is not requested_amount
+     
+     def buy(self, requested_amount):
+         if not self.is_available(requested_amount):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_33"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_33_1" aria-expanded="false" aria-controls="job_list___sub_collapse_33_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_33_1"><button class="btn btn-outline-info"><span class="job_id">33 : Job ID df2a98bba0d445399fcf005b6bc5e637</span></button></div></a><div aria-labelledby="job_list___sub_heading_33_1" data-parent="#job_list___sub_accordion_33" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_33_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=17" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (17, 11), end pos: (17, 14)</button></a></pre><pre>operator: core/ReplaceUnaryOperator_Delete_Not, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -14,7 +14,7 @@
+         return self.available_amount &gt;= requested_amount
+     
+     def buy(self, requested_amount):
+-        if not self.is_available(requested_amount):
++        if  self.is_available(requested_amount):
+             raise ValueError(f"Not enough {self.name} available")
+         self.available_amount -= requested_amount
+     </pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_34"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_34_1" aria-expanded="false" aria-controls="job_list___sub_collapse_34_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_34_1"><button class="btn btn-outline-info"><span class="job_id">34 : Job ID f9bc6a944be64c92bec0306f4f793ad5</span></button></div></a><div aria-labelledby="job_list___sub_heading_34_1" data-parent="#job_list___sub_accordion_34" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_34_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=46" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (46, 11), end pos: (46, 14)</button></a></pre><pre>operator: core/ReplaceUnaryOperator_Delete_Not, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -43,7 +43,7 @@
+         return sum([p.price * count for p, count in self.products.items()])
+     
+     def add_product(self, product: Product, amount: int):
+-        if not product.is_available(amount):
++        if  product.is_available(amount):
+             raise ValueError(f"Product {product} has only {product.available_amount} items")
+         self.products[product] = amount
+     </pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_35"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_35_1" aria-expanded="false" aria-controls="job_list___sub_collapse_35_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_35_1"><button class="btn btn-outline-info"><span class="job_id">35 : Job ID 7977cbecec984a55ab01998c72d4a6e3</span></button></div></a><div aria-labelledby="job_list___sub_heading_35_1" data-parent="#job_list___sub_accordion_35" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_35_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=17" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (17, 11), end pos: (17, 50)</button></a></pre><pre>operator: core/AddNot, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -14,7 +14,7 @@
+         return self.available_amount &gt;= requested_amount
+     
+     def buy(self, requested_amount):
+-        if not self.is_available(requested_amount):
++        if not not self.is_available(requested_amount):
+             raise ValueError(f"Not enough {self.name} available")
+         self.available_amount -= requested_amount
+     </pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_36"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_36_1" aria-expanded="false" aria-controls="job_list___sub_collapse_36_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_36_1"><button class="btn btn-outline-info"><span class="job_id">36 : Job ID 49a3dfa9070744c491f0f2650ceb285b</span></button></div></a><div aria-labelledby="job_list___sub_heading_36_1" data-parent="#job_list___sub_accordion_36" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_36_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=46" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (46, 11), end pos: (46, 43)</button></a></pre><pre>operator: core/AddNot, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -43,7 +43,7 @@
+         return sum([p.price * count for p, count in self.products.items()])
+     
+     def add_product(self, product: Product, amount: int):
+-        if not product.is_available(amount):
++        if not not product.is_available(amount):
+             raise ValueError(f"Product {product} has only {product.available_amount} items")
+         self.products[product] = amount
+     </pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_37"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_37_1" aria-expanded="false" aria-controls="job_list___sub_collapse_37_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_37_1"><button class="btn btn-outline-info"><span class="job_id">37 : Job ID f668d0069b644b2c8cbd6fab57964b84</span></button></div></a><div aria-labelledby="job_list___sub_heading_37_1" data-parent="#job_list___sub_accordion_37" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_37_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=51" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (51, 11), end pos: (51, 35)</button></a></pre><pre>operator: core/AddNot, occurrence: 2</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -48,7 +48,7 @@
+         self.products[product] = amount
+     
+     def remove_product(self, product):
+-        if product in self.products:
++        if not product in self.products:
+             del self.products[product]
+     
+     def submit_cart_order(self):</pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_38"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_38_1" aria-expanded="false" aria-controls="job_list___sub_collapse_38_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-info" id="job_list___sub_heading_38_1"><button class="btn btn-outline-info"><span class="job_id">38 : Job ID e23c5f98cd644148ab8482ac26ed1aba</span></button></div></a><div aria-labelledby="job_list___sub_heading_38_1" data-parent="#job_list___sub_accordion_38" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_38_1"><div class="card-body"><div class="work-item"><div class="alert alert-info test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.INCOMPETENT</p></div></div><pre class="location"><a href="pycharm://open?file=eshop.py&amp;line=55" class="text-secondary"><button class="btn btn-outline-dark">eshop.py, start pos: (55, 30), end pos: (55, 51)</button></a></pre><pre>operator: core/ZeroIterationForLoop, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aeshop.py
++++ beshop.py
+@@ -52,7 +52,7 @@
+             del self.products[product]
+     
+     def submit_cart_order(self):
+-        for product, count in self.products.items(): 
++        for product, count in []: 
+             product.buy(count)
+         self.products = dict()
+ </pre></div><div class="alert alert-secondary"><pre class="diff">Traceback (most recent call last):
+  File "C:\Users\MSI\Desktop\CDM\labs\4course\8sem\TTPP\TTPP\venv\Lib\site-packages\cosmic_ray\testing.py", line 46, in run_tests
+    proc = subprocess.run(shlex.split(command), check=True, env=env, timeout=timeout, capture_output=True)
+  File "C:\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...&lt;5 lines&gt;...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 1551, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...&lt;4 lines&gt;...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+</pre></div></div></div></div></div></div></div></div></div></div><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script type="text/javascript">$('div.job_list___sub_multi_collapse').on('shown.bs.collapse',  function () {    correct_behavior_functional_buttons();  });$('div.job_list___sub_multi_collapse').on('hidden.bs.collapse',  function () {    correct_behavior_functional_buttons();  });function correct_behavior_functional_buttons() {    var expand = false;    var collapse = false;    $('a.job_list___sub_multi_heading').each(function(index) {      if ($(this).attr('aria-expanded') == 'false') {        expand = true;        return false;      };    });    $('a.job_list___sub_multi_heading').each(function(index) {      if ($(this).attr('aria-expanded') == 'true') {        collapse = true;        return false;      };    });    if (expand) {      $('div#job_item_expand_all').css('display', 'inline-block');    } else {      $('div#job_item_expand_all').css('display', 'none');    };    if (collapse) {      $('div#job_item_collapse_all').css('display', 'inline-block');    } else {      $('div#job_item_collapse_all').css('display', 'none');    };  };correct_behavior_functional_buttons();</script></body></html>
